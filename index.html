@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,67 +11,76 @@
   <!-- CODED BY: JEFFREY TUASON -->
 </head>
 <body>
-
-  <a class="logo" href="#">
-    <img src="./images/logo.svg" alt="logo" />
-  </a>
-
-  <section class="card">
-
-    <!-- column 1 -->
-    <div> <!-- error message -->
-      <!-- bill -->
-      <h4 class="bill">Bill</h4>
-      <div class="bill__display">
-        <img src="./images/icon-dollar.svg" alt="dollar sign icon" />
-        <input class="bill__input" type="number" min="0" placeholder="0">
-      </div>
-
-      <!-- select tip -->
-      <h4 class="tip">Select Tip %</h4>
-      <div class="tip__wrapper">
-        <button type="button" class="btn primary-button tip-button">5%</button>
-        <button type="button" class="btn primary-button tip-button">10%</button>
-        <button type="button" class="btn primary-button tip-button">15%</button>
-        <button type="button" class="btn primary-button tip-button">25%</button>
-        <button type="button" class="btn primary-button tip-button">50%</button>
-        <input type="number" min="0" max="1000000" minlength="1" maxlength="10" class="tip__custom" placeholder="Custom">
-      </div>
-
-      <!-- number of people -->
-      <h4 class="people">Number of People</h4>
-      <div class="people__wrapper">
-        <img src="./images/icon-person.svg" alt="person icon" />
-        <input class="people__length" type="number" min="1" maxlength="3" placeholder="0">
-        <p class="tooltip">Can't be zero</p>
-      </div>
-    </div>
-
-    <!-- column 2 -->
-    <div class="output__wrapper">
-      <div class="output">
-        <!-- tip -->
-        <div class="tip-amount">
-          <div>
-            <h4>Tip Amount</h4>
-            <span>/ person</span>
+<main>
+  
+    <a class="logo" href="#">
+      <img src="./images/logo.svg" alt="logo" />
+    </a>
+  
+    <section class="card">
+  
+      <!-- column 1 -->
+      <div> <!-- error message -->
+        <!-- bill -->
+        <article>
+          <h4 class="bill">Bill</h4>
+          <div class="bill__display">
+            <img src="./images/icon-dollar.svg" alt="dollar sign icon" />
+            <input class="bill__input" type="number" placeholder="0">
           </div>
-          <span class="tip-amount__value">0</span>
-        </div>
-        <!-- total -->
-        <div class="total">
-          <div>
-            <h4>Total</h4>
-            <span>/ person</span>
+        </article>
+  
+        <!-- select tip -->
+        <article>
+          <h4 class="tip">Select Tip %</h4>
+          <div class="tip__wrapper">
+            <button type="button" class="btn primary-button tip-button">5%</button>
+            <button type="button" class="btn primary-button tip-button">10%</button>
+            <button type="button" class="btn primary-button tip-button">15%</button>
+            <button type="button" class="btn primary-button tip-button">25%</button>
+            <button type="button" class="btn primary-button tip-button">50%</button>
+            <input type="number" class="tip__custom" placeholder="Custom">
           </div>
-          <span class="total__value">0</span>
-        </div>
-      
+        </article>
+  
+        <!-- number of people -->
+        <article>
+          <h4 class="people">Number of People</h4>
+          <div class="people__wrapper">
+            <img src="./images/icon-person.svg" alt="person icon" />
+            <input class="people__length" type="number" placeholder="0">
+            <p class="tooltip">Can't be zero</p>
+          </div>
+        </article>
+
       </div>
-      <!-- button -->
-      <button type="button" class="btn reset-button">RESET</button>
-    </div>
-  </section>
+  
+      <!-- column 2 -->
+      <div class="output__wrapper">
+        <section class="output">
+          <!-- tip -->
+          <article class="tip-amount">
+            <div>
+              <h4>Tip Amount</h4>
+              <span>/ person</span>
+            </div>
+            <span class="tip-amount__value">0</span>
+          </article>
+          <!-- total -->
+          <article class="total">
+            <div>
+              <h4>Total</h4>
+              <span>/ person</span>
+            </div>
+            <span class="total__value">0</span>
+          </article>
+  
+        </section>
+        <!-- button -->
+        <button type="button" class="btn reset-button">RESET</button>
+      </div>
+    </section>
+</main>
 
   <script src="./script.js"></script>
 </body>
