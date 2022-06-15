@@ -7,7 +7,9 @@ const tipButtons = document.querySelectorAll('.tip-button');
 
 let tipPercentage = 0;
 
-billInput.addEventListener('input', () => calculateAmount(tipPercentage));
+billInput.addEventListener('input', () => {
+    calculateAmount(tipPercentage);
+});
 billInput.addEventListener('focusin', () => billInput.parentElement.classList.add('active'));
 billInput.addEventListener('focusout', () => billInput.parentElement.classList.remove('active'));
 
@@ -34,6 +36,11 @@ tipButtons.forEach(btn => {
 });
 
 const calculateAmount = (tipPercentage) => {
+
+    if(billInput.value.length > 6 || tipCustom.value > 100) {
+        return;
+    };
+
     const billValue = billInput.value;
     const tipValue = tipPercentage / 100;
     const peopleValue = peopleLength.value;
