@@ -91,5 +91,6 @@ const resetValues = () => {
 
     tipPercentage = 0;
     tipButtons.forEach(btn => btn.classList.remove('active-tip'));
+    peopleLength.parentElement.parentElement.classList.remove('error-people');
 };
 resetValues();
